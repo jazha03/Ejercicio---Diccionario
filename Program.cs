@@ -1,0 +1,7 @@
+namespace ejercicioDiccionarios
+{
+    class program
+    {
+        
+    }
+}
