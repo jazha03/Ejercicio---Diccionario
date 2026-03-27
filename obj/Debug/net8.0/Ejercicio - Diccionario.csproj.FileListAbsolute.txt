@@ -1,0 +1,5 @@
+Z:\2026pro\prog\Ejercicio - Diccionario\obj\Debug\net8.0\Ejercicio - Diccionario.GeneratedMSBuildEditorConfig.editorconfig
+Z:\2026pro\prog\Ejercicio - Diccionario\obj\Debug\net8.0\Ejercicio - Diccionario.AssemblyInfoInputs.cache
+Z:\2026pro\prog\Ejercicio - Diccionario\obj\Debug\net8.0\Ejercicio - Diccionario.AssemblyInfo.cs
+Z:\2026pro\prog\Ejercicio - Diccionario\obj\Debug\net8.0\Ejercicio - Diccionario.csproj.CoreCompileInputs.cache
+Z:\2026pro\prog\Ejercicio - Diccionario\obj\Debug\net8.0\Ejercicio - Diccionario.sourcelink.json

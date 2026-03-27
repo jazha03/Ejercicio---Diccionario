@@ -1,4 +1,4 @@
-namespace ejercicio-Diccionarios
+namespace Ejercicio-Diccionario
 {
     public class program
     {
@@ -18,7 +18,7 @@ namespace ejercicio-Diccionarios
                 Console.WriteLine("3. Consumir recurso");
                 Console.WriteLine("4. Consultar recurso");
                 Console.WriteLine("5. Salir");
-                Console.Write("Elegí una opción: ");
+                Console.WriteLine("Elegí una opción: ");
 
                 opcion = int.Parse(Console.ReadLine());
 
