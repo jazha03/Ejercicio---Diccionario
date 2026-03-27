@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ejercicio - Diccionario")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d7b3afe231e934f71be225e22dc7d5bd422c444")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e4bc04fc477f4e422aac3ccadb0ba34d5f772a7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ejercicio - Diccionario")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ejercicio - Diccionario")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

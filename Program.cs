@@ -1,14 +1,14 @@
-namespace Ejercicio-Diccionario
+namespace PracticaDiccionarios
 {
-    public class program
+    public class Program
     {
         static void Main()
         {
             Dictionary<string, int> inventario = new Dictionary<string, int>
-            { "Madera", 10 }
-            { "Hierro", 8 }
-            { "Soga", 6 }
-    
+            inventario.Add("Madera", 10);
+            inventario.Add("Hierro", 8);
+            inventario.Add("Soga", 6);
+
             int opcion;
             do
             {
@@ -47,81 +47,82 @@ namespace Ejercicio-Diccionario
 
             }while(opcion != 5);
         }
-    }
-}
+    
 
-    static void mostrarInventario(Dictionary<string, int> inventario)
-    {
-        Console.WriteLine("INVENTARIO");
+        static void mostrarInventario(Dictionary<string, int> inventario)
+        {   
+            Console.WriteLine("INVENTARIO");
 
-        foreach (var item in inventario)
-        {
-            Console.WriteLine(item.Key + ": " + item.Value);
+            foreach (var item in inventario)
+            {
+                Console.WriteLine(item.Key + ": " + item.Value);
+            }
         }
-    }
 
-    static void actualizarStock(Dictionary<string, int> inventario)
-    {
-        Console.Write("Ingresá el recurso: ");
-        string recurso = Console.ReadLine();
-
-        Console.Write("Cantidad que querés agregar: ");
-        int cantidad = int.Parse(Console.ReadLine());
-
-        if (inventario.ContainsKey(recurso))
+        static void actualizarStock(Dictionary<string, int> inventario)
         {
-            inventario[recurso] += cantidad;
-            Console.WriteLine("Stock actualizado.");
-        }
-        else
-        {
-            inventario.Add(recurso, cantidad);
-            Console.WriteLine("Se agregó el recurso.");
-        }
-    }
+            Console.Write("Ingresá el recurso: ");
+            string recurso = Console.ReadLine();
 
-    static void consumirRecurso(Dictionary<string, int> inventario)
-    {
-        Console.Write("Ingresá el recurso a consumir: ");
-        string recurso = Console.ReadLine();
-
-        if (inventario.ContainsKey(recurso))
-        {
-            Console.Write("Cantidad a consumir: ");
+            Console.Write("Cantidad que querés agregar: ");
             int cantidad = int.Parse(Console.ReadLine());
 
-            if (inventario[recurso] >= cantidad)
+            if (inventario.ContainsKey(recurso))
             {
-                inventario[recurso] -= cantidad;
-                Console.WriteLine("Recurso consumido.");
+                inventario[recurso] += cantidad;
+                Console.WriteLine("Stock actualizado.");
+            }
+            else
+            {
+                inventario.Add(recurso, cantidad);
+                Console.WriteLine("Se agregó el recurso");
+            }
+        }
 
-                if (inventario[recurso] < 5)
+        static void consumirRecurso(Dictionary<string, int> inventario)
+        {
+            Console.Write("Ingresá el recurso a consumir: ");
+            string recurso = Console.ReadLine();
+
+            if (inventario.ContainsKey(recurso))
+            {
+                Console.Write("Cantidad a consumir: ");
+                int cantidad = int.Parse(Console.ReadLine());
+
+                if (inventario[recurso] >= cantidad)
                 {
-                    Console.WriteLine("ALERTA: REABASTECER " + recurso.ToUpper());
+                    inventario[recurso] -= cantidad;
+                    Console.WriteLine("Recurso consumido.");
+
+                    if (inventario[recurso] < 5)
+                    {
+                        Console.WriteLine("ALERTA: REABASTECER " + recurso.ToUpper());
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("No hay suficiente stock");
                 }
             }
             else
             {
-                Console.WriteLine("No hay suficiente stock");
+                Console.WriteLine("El recurso no existe");
             }
         }
-        else
+
+        static void consultarRecurso(Dictionary<string, int> inventario)
         {
-            Console.WriteLine("El recurso no existe");
+            Console.Write("Ingresá el recurso a consultar: ");
+            string recurso = Console.ReadLine();
+
+            if (inventario.ContainsKey(recurso))
+            {
+                Console.WriteLine("Stock de " + recurso + ": " + inventario[recurso]);
+            }
+            else
+            {
+                Console.WriteLine("Recurso no encontrado.");
+            }
         }
     }
-
-    static void consultarRecurso(Dictionary<string, int> inventario)
-    {
-        Console.Write("Ingresá el recurso a consultar: ");
-        string recurso = Console.ReadLine();
-
-        if (inventario.ContainsKey(recurso))
-        {
-            Console.WriteLine("Stock de " + recurso + ": " + inventario[recurso]);
-        }
-        else
-        {
-            Console.WriteLine("Recurso no encontrado.");
-        }
-    }
+}
