@@ -2,9 +2,9 @@ namespace ejercicio-Diccionarios
 {
     public class program
     {
-        static void main{}
+        static void Main()
         {
-            Dictionary<string, int> inventario = new Dictionary<string, int>()
+            Dictionary<string, int> inventario = new Dictionary<string, int>
             { "Madera", 10 }
             { "Hierro", 8 }
             { "Soga", 6 }
@@ -41,18 +41,15 @@ namespace ejercicio-Diccionarios
                         break;
 
                     case 5:
-                        Console.WriteLine("Saliendo");
+                        Console.WriteLine("Saliendo del menú");
                         break;
                 } 
 
             }while(opcion != 5);
-            
         }
     }
 }
-            
 
-        
     static void mostrarInventario(Dictionary<string, int> inventario)
     {
         Console.WriteLine("INVENTARIO");
@@ -74,12 +71,12 @@ namespace ejercicio-Diccionarios
         if (inventario.ContainsKey(recurso))
         {
             inventario[recurso] += cantidad;
-            Console.WriteLine("Stock actualizado correctamente.");
+            Console.WriteLine("Stock actualizado.");
         }
         else
         {
             inventario.Add(recurso, cantidad);
-            Console.WriteLine("Recurso agregado al inventario.");
+            Console.WriteLine("Se agregó el recurso.");
         }
     }
 
@@ -128,4 +125,3 @@ namespace ejercicio-Diccionarios
             Console.WriteLine("Recurso no encontrado.");
         }
     }
-
